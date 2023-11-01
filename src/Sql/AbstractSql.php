@@ -353,7 +353,9 @@ abstract class AbstractSql implements SqlInterface
             list($table, $schema) = $table->getTableAndSchema();
         }
 
-        if ($table instanceof Select) {
+        if ($table instanceof ExpressionInterface) {
+            return $this->processExpression($table, $platform, $driver, $parameterContainer);
+        } elseif ($table instanceof Select) {
             $table = '(' . $this->processSubselect($table, $platform, $driver, $parameterContainer) . ')';
         } elseif ($table) {
             $table = $platform->quoteIdentifier($table);
