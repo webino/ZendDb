@@ -1,5 +1,5 @@
 {
-    "name": "zendframework/zend-db",
+    "name": "webino/zend-db",
     "description": " ",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -11,6 +11,9 @@
         "psr-4": {
             "Zend\\Db\\": "src/"
         }
+    },
+    "replace": {
+        "zendframework/zend-db": "self.version"
     },
     "require": {
         "php": "^5.5 || ^7.0",
