@@ -1,5 +1,5 @@
 {
-    "name": "zendframework/zend-db",
+    "name": "webino/zend-db",
     "description": "Database abstraction layer, SQL abstraction, result set abstraction, and RowDataGateway and TableDataGateway implementations",
     "license": "BSD-3-Clause",
     "keywords": [
@@ -14,6 +14,9 @@
         "rss": "https://github.com/zendframework/zend-db/releases.atom",
         "chat": "https://zendframework-slack.herokuapp.com",
         "forum": "https://discourse.zendframework.com/c/questions/components"
+    },
+    "replace": {
+        "zendframework/zend-db": "self.version"
     },
     "require": {
         "php": "^5.6 || ^7.0",
