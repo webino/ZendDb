@@ -119,7 +119,7 @@ class In extends AbstractExpression implements PredicateInterface
             $replacements[] = $values;
             $types[] = self::TYPE_VALUE;
         } else {
-            foreach ($values as $argument) {
+            foreach ((array)$values as $argument) {
                 list($replacements[], $types[]) = $this->normalizeArgument($argument, self::TYPE_VALUE);
             }
             $specification = vsprintf(
